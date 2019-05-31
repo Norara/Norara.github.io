@@ -2,6 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
     <title>Nora Piva</title>
     <link rel="stylesheet" href="css/style.css" />
     <link
@@ -14,24 +15,18 @@
   <body>
     <header>
       <a class="logo" href="index.html">Nora Piva</a>
-      <nav class="navigation">
-        <ul>
-          <li class="button button_current">
-            <a href="index.html">Who am I</a>
-          </li>
-
-          <li class="button"><a href="projects.html">Projects</a></li>
-          <li class="button"><a href="contacts.html">Contact me</a></li>
-        </ul>
+      <nav>
+        <a class="button current" href="index.html">Who am I</a>
+        <a class="button" href="projects.html">Projects</a>
+        <a class="button" href="contacts.html">Contact me</a>
       </nav>
     </header>
 
     <main>
       <div id="About">
-        <img id="Me" src="images/Nora.jpg" />
-
+        <img id="photoMe" src="images/Nora.jpg" />
         <p>
-          Hello I am Nora.<br />
+          Hello I am Nora :)<br />
           I am a frontend engineer.
         </p>
         <p>
@@ -40,22 +35,24 @@
         <p>
           I love art, the sea, and Indiana Jones. <br />
           After a PhD and some time working on
-          <a href="https://www.khm.uio.no/english/visit-us/viking-ship-museum/"
+          <a
+            class="text"
+            href="https://www.khm.uio.no/english/visit-us/viking-ship-museum/"
             >Viking Shipwreks</a
           >,<br />
           I decided to leave academia, and follow a new path. <br />
           I quit my job, and moved back to London.
         </p>
-
         <p>Best decision of my life.</p>
-        <br />
         <br />
         <p>
           You can see my CV
-          <a href="documents/NoraPivaCV.pdf" target="_blank">here</a>
+          <a class="text" href="documents/NoraPivaCV.pdf" target="_blank"
+            >here</a
+          >
         </p>
       </div>
     </main>
+    <footer></footer>
   </body>
-  <footer></footer>
 </html>

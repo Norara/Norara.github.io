@@ -4,76 +4,52 @@
   box-sizing: border-box;
 }
 
-html,
 body {
-  height: 100%;
-  margin: 0;
   font-family: "Roboto", sans-serif;
-}
-
-body {
   background-color: #f6e1e1;
   display: flex;
+  height: 1400px;
 }
 
 /* Header*/
 header {
   margin: 30px;
-  width: 250px;
+  width: 20%;
+  min-width: 210px;
 }
 
 .logo {
-  font-family: "Comfortaa", cursive;
-  font-size: 80px;
   text-decoration: none;
+  font-family: "Comfortaa", cursive;
   color: #eb4d55;
+  font-size: 80px;
 }
 
-nav,
-ul {
+nav {
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-  letter-spacing: 2px;
-  width: 100%;
-  z-index: 10;
-  cursor: pointer;
-  text-decoration: none;
 }
 
 .button {
+  height: 45px;
+  width: 200px;
   border: 2px solid #eb4d55;
   border-radius: 255px 15px 225px 15px/15px 225px 15px 255px;
-  border-collapse: separate;
-  border-spacing: 5px;
-  width: 200px;
+  margin: 5px;
   margin-top: 10px;
   margin-bottom: 10px;
-}
-
-nav > ul > li {
-  display: inline-block;
-  align-items: flex-end;
-  margin: 5px;
-}
-
-nav > ul > li > a {
   padding: 10px;
-  display: block;
-  height: 40px;
-  width: 200px;
-  color: #eb4d55;
   text-decoration: none;
-  letter-spacing: 3px;
   text-transform: uppercase;
+  color: #eb4d55;
   font-size: 18px;
+  letter-spacing: 3px;
+  cursor: pointer;
 }
 
-.button_current {
+.current {
   background-color: #eb4d55;
-}
-
-.button_current > a {
   color: #f6e1e1;
 }
 
@@ -81,44 +57,61 @@ nav > ul > li > a {
 
 main {
   background-color: white;
-  width: 1100px;
+  width: 75%;
   height: 100%;
   overflow: auto;
   text-align: center;
   border-right: 2px solid #eb4d55;
   border-left: 2px solid #eb4d55;
-}
-
-div {
   color: #333366;
-  margin: 40px;
-}
-
-p {
-  padding: 10px;
+  padding-top: 50px;
   font-size: 12px;
   letter-spacing: 1.5px;
   line-height: 20px;
 }
 
-#Contact {
-  padding-top: 50px;
+p {
+  padding: 10px;
+  font-size: 13px;
 }
 
-section {
-  padding: 30px;
-}
-#Me {
-  width: 300px;
-  margin-bottom: 20px;
+.text {
+  color: #333366;
 }
 
 img {
-  width: 800px;
   padding: 2px;
   border: 3px solid #f6e1e1;
 }
 
-a {
-  color: #333366;
+.project {
+  padding: 30px;
+}
+
+.photoProject {
+  width: 90%;
+}
+
+#photoMe {
+  width: 35%;
+  margin-bottom: 20px;
+  min-width: 180px;
+}
+
+/*right border*/
+
+footer {
+  width: 5%;
+}
+
+/* MEDIA QUERIES */
+
+/* tablets */
+
+@media screen and (max-width: 800px) {
+  #photoMe {
+    width: 45%;
+    margin-bottom: 20px;
+    min-width: 180px;
+  }
 }

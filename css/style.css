@@ -106,12 +106,79 @@ footer {
 
 /* MEDIA QUERIES */
 
-/* tablets */
+/* phone */
 
-@media screen and (max-width: 800px) {
-  #photoMe {
+@media screen and (max-width: 450px) {
+  body {
+    font-family: "Roboto", sans-serif;
+    background-color: #f6e1e1;
+    display: block;
+    width: 100%;
+  }
+
+  header {
+    width: 100%;
+    margin: 0;
+    display: flex;
+  }
+
+  .logo {
     width: 45%;
+    font-size: 60px;
+    line-height: 80px;
+    margin: 10px;
+  }
+
+  nav {
+    width: 45%;
+    margin: 10px;
+  }
+
+  .button {
+    height: 30x;
+    width: 100%;
+    margin: 0;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #eb4d55;
+    font-size: 17px;
+    letter-spacing: 3px;
+    cursor: pointer;
+  }
+
+  .current {
+    background-color: #eb4d55;
+    color: #f6e1e1;
+  }
+
+  main {
+    padding: 15px;
+    padding-top: 20px;
+    width: 100%;
+  }
+
+  p {
+    padding: 10px;
+    font-size: 16px;
+  }
+
+  .project {
+    padding: 15px;
+  }
+
+  .photoProject {
+    width: 100%;
+  }
+
+  #photoMe {
+    width: 60%;
     margin-bottom: 20px;
     min-width: 180px;
+  }
+
+  footer {
+    width: 0%;
   }
 }

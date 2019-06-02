@@ -13,31 +13,33 @@
   </head>
 
   <body>
-    <header>
-      <a class="logo" href="index.html">Nora Piva</a>
-      <nav>
-        <a class="button" href="index.html">Who am I</a>
-        <a class="button current" href="projects.html">Projects</a>
-        <a class="button" href="contacts.html">Contact me</a>
-      </nav>
-    </header>
-
-    <main>
-      <div id="Projects">
-        <p>
-          I have been working both as a freelancer and on personal projects.<br />
-        </p>
-        <p>These are the sites I made:</p>
-        <section class="project">
-          <img class="photoProject" src="images/cdo2.png" />
-          <p><a href="http://www.cdo2.com">http://www.cdo2.com/</a></p>
-        </section>
-        <section class="project">
-          <img class="photoProject" src="images/coming-soon.png" />
-          <p>norapiva.com coming soon page (no longer online)</p>
-        </section>
-      </div>
-    </main>
+    <div class="content flex">
+      <header>
+        <a class="header-element logo" href="index.html">Nora Piva</a>
+        <nav class="header-element">
+          <a class="button" href="index.html">Who am I</a>
+          <a class="button" id="current" href="projects.html">Projects</a>
+          <a class="button" href="contacts.html">Contact me</a>
+        </nav>
+      </header>
+      <div class="clear"></div>
+      <main>
+        <div id="Projects">
+          <p>
+            I have been working both as a freelancer and on personal projects.
+          </p>
+          <p>These are the sites I made:</p>
+          <section class="project">
+            <img class="photoProject" src="images/cdo2.png" />
+            <p><a href="http://www.cdo2.com">http://www.cdo2.com/</a></p>
+          </section>
+          <section class="project">
+            <img class="photoProject" src="images/coming-soon.png" />
+            <p>norapiva.com coming soon page (no longer online)</p>
+          </section>
+        </div>
+      </main>
+      <div class="right-border"></div>
+    </div>
   </body>
-  <footer></footer>
 </html>

@@ -9,14 +9,25 @@
       href="https://fonts.googleapis.com/css?family=Comfortaa|Roboto"
       rel="stylesheet"
     />
-    <script type="text/javascript" src="js"></script>
   </head>
 
   <body>
     <div class="content flex">
       <header>
-        <a class="header-element logo" href="index.html">Nora Piva</a>
-        <nav class="header-element">
+        <div class="header">
+          <a class="header-element logo" href="index.html">Nora Piva</a>
+          <button
+            onClick="myFunction()"
+            class="hamburger hamburger--squeeze "
+            type="button"
+          >
+            <span class="hamburger-box">
+              <span class="hamburger-inner"></span>
+            </span>
+          </button>
+        </div>
+        <div class="clear"></div>
+        <nav id="burger-list" class="closed">
           <a class="button" href="index.html">Who am I</a>
           <a class="button" id="current" href="projects.html">Projects</a>
           <a class="button" href="contacts.html">Contact me</a>
@@ -42,4 +53,15 @@
       <div class="right-border"></div>
     </div>
   </body>
+
+  <script>
+    function myFunction() {
+      var x = document.getElementById("burger-list");
+      if (x.className === "closed") {
+        x.className = "open";
+      } else {
+        x.className = "closed";
+      }
+    }
+  </script>
 </html>

@@ -17,8 +17,9 @@
         <div class="header">
           <a class="header-element logo" href="index.html">Nora Piva</a>
           <button
+            id="hamburger-button"
             onClick="myFunction()"
-            class="hamburger hamburger--squeeze "
+            class="hamburger hamburger--squeeze"
             type="button"
           >
             <span class="hamburger-box">
@@ -66,11 +67,15 @@
   <script>
     function myFunction() {
       var x = document.getElementById("burger-list");
+      var y = document.getElementById("hamburger-button");
       if (x.className === "closed") {
         x.className = "open";
+        y.className = "hamburger hamburger--squeeze is-active";
       } else {
         x.className = "closed";
+        y.className = "hamburger hamburger--squeeze";
       }
+      console.log(y.className);
     }
   </script>
 </html>

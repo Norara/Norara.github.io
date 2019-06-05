@@ -5,7 +5,8 @@
 }
 
 html,
-body {
+body,
+main {
   height: 100vh;
 }
 
@@ -61,6 +62,11 @@ nav {
 #current {
   background-color: #eb4d55;
   color: #f6e1e1;
+}
+
+#hamburger-button {
+  display: none;
+  overflow: hidden;
 }
 
 /*Main*/
@@ -145,6 +151,10 @@ img {
     justify-content: flex-start;
   }
 
+  .header {
+    max-width: 340px;
+  }
+
   .logo {
     width: 30%;
     font-size: 70px;
@@ -206,8 +216,6 @@ img {
 
 /* mobile */
 
-/* hamburger */
-
 @media screen and (max-width: 480px) {
   header {
     position: static;
@@ -224,6 +232,7 @@ img {
     padding: 10px;
     background-color: #f6e1e1;
     border-bottom: 2px solid #eb4d55;
+    max-width: 480px;
   }
 
   .content {
@@ -272,6 +281,13 @@ img {
 
   .closed {
     height: 0;
+  }
+
+  /* hamburger */
+
+  #hamburger-button {
+    display: block;
+    overflow: auto;
   }
 
   .hamburger {

@@ -35,6 +35,10 @@ header {
   font-size: 80px;
 }
 
+#logo {
+  display: none;
+}
+
 nav {
   display: flex;
   flex-direction: column;
@@ -107,6 +111,8 @@ img {
 
 .photoProject {
   width: 90%;
+  height: 400px;
+  object-fit: cover;
 }
 
 #photoMe {

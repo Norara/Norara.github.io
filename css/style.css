@@ -21,7 +21,7 @@ main {
 
 /* Header*/
 
-header {
+#header {
   margin: 30px;
   height: 100%;
   width: 20%;

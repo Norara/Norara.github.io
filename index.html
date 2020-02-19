@@ -16,86 +16,72 @@
     <title>Nora Piva</title>
     <link rel="stylesheet" href="css/style.css" />
     <link
-      href="https://fonts.googleapis.com/css?family=Comfortaa|Roboto"
+      href="https://fonts.googleapis.com/css?family=Comfortaa:700&display=swap"
       rel="stylesheet"
     />
   </head>
 
   <body>
-    <div class="content flex">
-      <header id="header">
-        <img id="logo" src="images/Nora_logo.png" />
-        <div class="header">
-          <a class="header-element logo" href="index.html">Nora Piva</a>
-          <button
-            id="hamburger-button"
-            onClick="myFunction()"
-            class="hamburger hamburger--squeeze "
-            type="button"
+    <header>
+      <h1><a id="logo" href="index.html">Nora Piva</a></h1>
+
+      <button
+        id="hamburger-button"
+        onClick="useBurger()"
+        class="hamburger hamburger--squeeze "
+        type="button"
+      >
+        <span class="hamburger-box">
+          <span class="hamburger-inner"></span>
+        </span>
+      </button>
+
+      <nav id="burger-list" class="closed">
+        <ul>
+          <li><a class="menu" id="current" href="index.html">Who am I</a></li>
+          <li><a class="menu" href="projects.html">Projects</a></li>
+          <li>
+            <a class="menu" href="contacts.html">Contact me</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <main id="About">
+      <div>
+        <img id="photoMe" src="images/Nora.jpg" />
+      </div>
+      <div class="text">
+        <p>
+          Hello I am Nora :)<br />
+          I am a frontend engineer.
+        </p>
+        <p>
+          I am also a former maritime archaeological conservator.
+        </p>
+        <p>
+          I love art, the sea, and Indiana Jones. <br />
+          After a PhD and some time working on
+          <a
+            class="text"
+            href="https://www.khm.uio.no/english/visit-us/viking-ship-museum/"
+            >Viking Shipwreks</a
           >
-            <span class="hamburger-box">
-              <span class="hamburger-inner"></span>
-            </span>
-          </button>
-        </div>
-        <div class="clear"></div>
-        <nav id="burger-list" class="closed">
-          <a class="button" id="current" href="index.html">Who am I</a>
-          <a class="button" href="projects.html">Projects</a>
-          <a class="button" href="contacts.html">Contact me</a>
-        </nav>
-      </header>
-      <div class="clear"></div>
-      <main>
-        <div id="About">
-          <img id="photoMe" src="images/Nora.jpg" />
-          <p>
-            Hello I am Nora :)<br />
-            I am a frontend engineer.
-          </p>
-          <p>
-            I am also a former maritime archaeological conservator.
-          </p>
-          <p>
-            I love art, the sea, and Indiana Jones. <br />
-            After a PhD and some time working on
-            <a
-              class="text"
-              href="https://www.khm.uio.no/english/visit-us/viking-ship-museum/"
-              >Viking Shipwreks</a
-            >,<br />
-            I decided to leave academia, and follow a new path. <br />
-            I quit my job, and moved back to London.
-          </p>
-          <p>Best decision of my life.</p>
-          <br />
-          <p>
-            You can see my CV
-            <a
-              class="text"
-              href="documents/Eleonora_Piva_CV.pdf"
-              target="_blank"
-              >here</a
-            >
-          </p>
-        </div>
-      </main>
-      <div class="right-border"></div>
-    </div>
+          in Oslo,<br />
+          I decided to leave academia, and follow a new path. <br />
+          I quit my job, and moved back to London.
+        </p>
+        <p>Best decision of my life.</p>
+        <br />
+        <p>
+          You can see my CV
+          <a class="text" href="documents/Eleonora_Piva_CV.pdf" target="_blank"
+            >here</a
+          >
+        </p>
+      </div>
+    </main>
   </body>
 
-  <script>
-    function myFunction() {
-      var x = document.getElementById("burger-list");
-      var y = document.getElementById("hamburger-button");
-      if (x.className === "closed") {
-        x.className = "open";
-        y.className = "hamburger hamburger--squeeze is-active";
-      } else {
-        x.className = "closed";
-        y.className = "hamburger hamburger--squeeze";
-      }
-      console.log(y.className);
-    }
-  </script>
+  <script type="text/javascript" src="js/burger.js"></script>
 </html>

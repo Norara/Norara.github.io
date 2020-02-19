@@ -13,76 +13,57 @@
     <title>Nora Piva - Contacts</title>
     <link rel="stylesheet" href="css/style.css" />
     <link
-      href="https://fonts.googleapis.com/css?family=Comfortaa|Roboto"
+      href="https://fonts.googleapis.com/css?family=Comfortaa:700&display=swap"
       rel="stylesheet"
     />
   </head>
 
   <body>
-    <div class="content flex">
-      <header>
-        <div class="header">
-          <a class="header-element logo" href="index.html">Nora Piva</a>
-          <button
-            id="hamburger-button"
-            onClick="myFunction()"
-            class="hamburger hamburger--squeeze"
-            type="button"
+    <header>
+      <h1><a id="logo" href="index.html">Nora Piva</a></h1>
+      <button
+        id="hamburger-button"
+        onClick="useBurger()"
+        class="hamburger hamburger--squeeze"
+        type="button"
+      >
+        <span class="hamburger-box">
+          <span class="hamburger-inner"></span>
+        </span>
+      </button>
+      <nav id="burger-list" class="closed">
+        <ul>
+          <li><a class="menu" href="index.html">Who am I</a></li>
+          <li><a class="menu" href="projects.html">Projects</a></li>
+          <li>
+            <a class="menu" id="current" href="contacts.html">Contact me</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <main id="Contacts">
+      <div class="text">
+        <p>To get in touch email me at: <br />piva.eleonora@gmail.com</p>
+        <p>
+          Linkedin:
+          <a
+            href="https://www.linkedin.com/in/eleonora-piva-3b938b113/"
+            target="_blank"
+            >Eleonora Piva</a
           >
-            <span class="hamburger-box">
-              <span class="hamburger-inner"></span>
-            </span>
-          </button>
-        </div>
-        <div class="clear"></div>
-        <nav id="burger-list" class="closed">
-          <a class="button" href="index.html">Who am I</a>
-          <a class="button" href="projects.html">Projects</a>
-          <a class="button" id="current" href="contacts.html">Contact me</a>
-        </nav>
-      </header>
-      <div class="clear"></div>
-      <main>
-        <div id="Contact">
-          <section>
-            <p>To get in touch email me at: <br />piva.eleonora@gmail.com</p>
-            <p>
-              Linkedin:
-              <a
-                href="https://www.linkedin.com/in/eleonora-piva-3b938b113/"
-                target="_blank"
-                >Eleonora Piva</a
-              >
-            </p>
-            <p>
-              Twitter:
-              <a href="https://twitter.com/nora_piva" target="_blank"
-                >nora_piva</a
-              >
-            </p>
-            <p>
-              Github:
-              <a href="https://github.com/Norara" target="_blank">Norara</a>
-            </p>
-          </section>
-        </div>
-      </main>
-      <div class="right-border"></div>
-    </div>
+        </p>
+        <p>
+          Twitter:
+          <a href="https://twitter.com/nora_piva" target="_blank">nora_piva</a>
+        </p>
+        <p>
+          Github:
+          <a href="https://github.com/Norara" target="_blank">Norara</a>
+        </p>
+      </div>
+    </main>
   </body>
 
-  <script>
-    function myFunction() {
-      var x = document.getElementById("burger-list");
-      var y = document.getElementById("hamburger-button");
-      if (x.className === "closed") {
-        x.className = "open";
-        y.className = "hamburger hamburger--squeeze is-active";
-      } else {
-        x.className = "closed";
-        y.className = "hamburger hamburger--squeeze";
-      }
-      console.log(y.className);
-    }
-  </script>
+  <script type="text/javascript" src="js/burger.js"></script>
 </html>

@@ -13,95 +13,158 @@
     <title>Nora Piva - Projects</title>
     <link rel="stylesheet" href="css/style.css" />
     <link
-      href="https://fonts.googleapis.com/css?family=Comfortaa|Roboto"
+      href="https://fonts.googleapis.com/css?family=Comfortaa:700&display=swap"
       rel="stylesheet"
     />
   </head>
 
   <body>
-    <div class="content flex">
-      <header>
-        <div class="header">
-          <a class="header-element logo" href="index.html">Nora Piva</a>
-          <button
-            id="hamburger-button"
-            onClick="myFunction()"
-            class="hamburger hamburger--squeeze "
-            type="button"
-          >
-            <span class="hamburger-box">
-              <span class="hamburger-inner"></span>
-            </span>
-          </button>
-        </div>
-        <div class="clear"></div>
-        <nav id="burger-list" class="closed">
-          <a class="button" href="index.html">Who am I</a>
-          <a class="button" id="current" href="projects.html">Projects</a>
-          <a class="button" href="contacts.html">Contact me</a>
-        </nav>
-      </header>
-      <div class="clear"></div>
-      <main>
-        <div id="Projects">
-          <p>
-            I have been working both as a freelancer and on personal projects.
-          </p>
-          <p>These are the sites and projcts I made:</p>
-          <section class="project">
+    <header>
+      <h1><a id="logo" href="index.html">Nora Piva</a></h1>
+
+      <button
+        id="hamburger-button"
+        onClick="useBurger()"
+        class="hamburger hamburger--squeeze "
+        type="button"
+      >
+        <span class="hamburger-box">
+          <span class="hamburger-inner"></span>
+        </span>
+      </button>
+
+      <nav id="burger-list" class="closed">
+        <ul>
+          <li><a class="menu" href="index.html">Who am I</a></li>
+          <li>
+            <a class="menu" id="current" href="projects.html">Projects</a>
+          </li>
+          <li>
+            <a class="menu" href="contacts.html">Contact me</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <main id="Projects">
+      <div class="text">
+        <p>
+          I have been working both as a freelancer and on personal projects.
+        </p>
+        <p>
+          These are the sites I made. <br />
+          You can click on each picture to get more details about each project.
+        </p>
+      </div>
+      <div class="flex">
+        <section class="project">
+          <button class="modal-button">
             <img class="photoProject" src="images/diceProject.png" />
-            <p>
-              <a href="https://dice.norapiva.com/">Dice roller</a>
-              - personal ReactJS project
-            </p>
-          </section>
-          <section class="project">
+          </button>
+          <p>
+            <a href="https://dice.norapiva.com/">Dice Roller</a>
+            <br />
+            personal ReactJS project
+          </p>
+
+          <div id="projectModal1" class="modal">
+            <div class="modal-content">
+              <span class="close">x</span>
+              <h3>Dice Roller Project</h3>
+              <h4>
+                REACTJS, DYNAMIC CONTENT, HTML/CSS, RESPONSIVE DESIGN, VECTOR
+                DESIGN
+              </h4>
+              <h4>The idea</h4>
+              <p>
+                I made this project to practice setting up a one page app in
+                ReactJS.<br />I chose to make a dice roller because I play some
+                rpg and often friends or myself forget the dice. <br />This is
+                an helpful little tool for those situations when you really need
+                a dice but you don't have one.
+              </p>
+              <h4>The execution</h4>
+              <p>
+                The app is structured with 1 statefull and 3 stateless
+                components.<br />In the components I used render props and I
+                also passed a method.<br />Two of the components are compiled as
+                lists (the dice and the result of the roll).
+              </p>
+              <img src="images/dice_lists.png" />
+              <p>
+                The main event handler returns onClick the result of the chocen
+                dice. Because I also put a coin I had to include some
+                conditional rendering for a heads/tails instead of a numeric
+                result.
+              </p>
+              <img src="images/dice_handler.png" />
+              <p>
+                I imported my own designs for the dice and the logo. I use
+                affinity designer as a designing tool, it allows to realise both
+                vector and pixel based illustrations.
+              </p>
+              <img src="images/dice_images.png" />
+              <p>
+                I hosted the dice roller project on Firebase to practice with
+                another hosting provider than Github
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <section class="project">
+          <button class="modal-button">
             <img class="photoProject" src="images/caseificio.png" />
-            <p>
-              <a href="https://www.saporidimontegnago.com/#/"
-                >http://www.saporidimontegnago.com/</a
-              >
-              - commissioned work
-            </p>
-          </section>
-          <section class="project">
+          </button>
+          <p>
+            <a href="https://www.saporidimontegnago.com/#/"
+              >www.saporidimontegnago.com</a
+            >
+            <br />commissioned work
+          </p>
+          <div id="projectModal2" class="modal">
+            <div class="modal-content">
+              <span class="close">x</span>
+              <p>Some more text in the Modal..</p>
+            </div>
+          </div>
+        </section>
+
+        <section class="project">
+          <button class="modal-button">
             <img class="photoProject" src="images/stacksfit.png" />
-            <p>
-              <a href="https://www.stacksfit.co.uk/"
-                >http://www.stacksfit.co.uk/</a
-              >
-              - commissioned work
-            </p>
-          </section>
-          <section class="project">
+          </button>
+          <p>
+            <a href="https://www.stacksfit.co.uk/">www.stacksfit.co.uk</a
+            ><br />commissioned work
+          </p>
+          <div id="projectModal3" class="modal">
+            <div class="modal-content">
+              <span class="close">x</span>
+              <p>Some more text in the Modal..</p>
+            </div>
+          </div>
+        </section>
+
+        <section class="project">
+          <button class="modal-button">
             <img class="photoProject" src="images/cdo2.png" />
-            <p>
-              <a href="http://www.cdo2.com">http://www.cdo2.com/</a>
-              - commissioned work
-            </p>
-          </section>
-          <section class="project">
-            <img class="photoProject" src="images/coming-soon.png" />
-            <p><a href="" target="_blank">Dice roller</a> - personal project</p>
-          </section>
-        </div>
-      </main>
-      <div class="right-border"></div>
-    </div>
+          </button>
+          <p>
+            <a href="http://www.cdo2.com">www.cdo2.com</a>
+            <br />commissioned work
+          </p>
+          <div id="projectModal4" class="modal">
+            <div class="modal-content">
+              <span class="close">x</span>
+              <p>Some more text in the Modal..</p>
+            </div>
+          </div>
+        </section>
+      </div>
+    </main>
   </body>
 
-  <script>
-    function myFunction() {
-      var x = document.getElementById("burger-list");
-      var y = document.getElementById("hamburger-button");
-      if (x.className === "closed") {
-        x.className = "open";
-        y.className = "hamburger hamburger--squeeze is-active";
-      } else {
-        x.className = "closed";
-        y.className = "hamburger hamburger--squeeze";
-      }
-      console.log(y.className);
-    }
-  </script>
+  <script type="text/javascript" src="js/burger.js"></script>
+  <script type="text/javascript" src="js/popup.js"></script>
 </html>
